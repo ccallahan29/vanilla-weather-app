@@ -30,7 +30,6 @@ ul {
 .daily-temp {
   font-size: 50px;
   font-weight: 100px;
-  line-height: 1;
 }
 
 .units {
@@ -43,11 +42,10 @@ ul {
   border-radius: 8px;
   padding: 20px;
 }
-.weather-temperature {
-  margin-top: 30px;
-}
+
 .weather-temperature img {
-  height: 50px;
+  height: 100px;
+  padding-bottom: 10px;
   margin-right: 10px;
 }
 .wrapper {
