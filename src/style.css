@@ -28,19 +28,49 @@ ul {
 }
 
 .daily-temp {
-  font-size: 50px;
+  font-size: 64px;
   font-weight: 100px;
 }
 
+.input-form {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.search-button {
+  background-color: #63baec;
+  border: 1px solid #095ca0;
+  border-radius: 6px;
+  color: #095ca0;
+  padding: 3px 20px;
+}
+
+.search-button:hover {
+  background-color: #095ca0;
+  border: 1px solid #63baec;
+  color: #63baec;
+  cursor: pointer;
+  transition: 0.3s ease-in all;
+}
+
 .units {
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
-  top: -25px;
+  top: -35px;
 }
 .weather-app {
   border: 2px solid rgb(91, 113, 135);
   border-radius: 8px;
   padding: 20px;
+}
+
+.weather-temperature .active {
+  color: rgb(44, 53, 62);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
 
 .weather-temperature img {

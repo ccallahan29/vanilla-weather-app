@@ -22,7 +22,7 @@
               <input type="search" placeholder="Search city..." class="input-form" id="input-city" />
             </div>
             <div class="col-3">
-              <input type="submit" value="search" class="btn btn-primary" />
+              <input type="submit" value="search" class="search-button" />
             </div>
           </div>
         </form>
@@ -45,7 +45,10 @@
               <img src="" id="weather-icon" alt="" />
               <div>
                 <span class="daily-temp" id="temperature"></span>
-                <span class="units">°C | F</span>
+                <span class="units">
+                  <a href="#" id="celsius" class="active">°C</a> |
+                  <a href="#" id="fahrenheit">°F</a>
+                </span>
               </div>
             </div>
           </div>
