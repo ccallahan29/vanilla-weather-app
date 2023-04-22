@@ -18,12 +18,15 @@
       <div class="weather-app">
         <form id="search-form">
           <div class="row">
-            <div class="col-9">
+            <section class="col-6">
               <input type="search" placeholder="Search city..." class="input-form" id="input-city" />
-            </div>
-            <div class="col-3">
+            </section>
+            <section class="col-6">
+              <button class="location-button" id="current-location"> <img class="location-img"
+                  src="src/img/undraw_current_location.svg" /> </button>
               <input type="submit" value="search" class="search-button" />
-            </div>
+              
+            </section>
           </div>
         </form>
         <h1 class="city" id="current-city">

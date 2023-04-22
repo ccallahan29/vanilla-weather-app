@@ -1,6 +1,9 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: url("img/cozy_night.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -33,19 +36,36 @@ ul {
 }
 
 .input-form {
+  display: inline-block;
   width: 100%;
   margin-bottom: 15px;
 }
 
-.search-button {
+.location-img {
+  max-width: 50px;
+}
+
+.search-button,
+.location-button {
+  display: inline-block;
   background-color: #63baec;
   border: 1px solid #095ca0;
   border-radius: 6px;
   color: #095ca0;
-  padding: 3px 20px;
 }
 
-.search-button:hover {
+.location-button {
+  padding: 2px 20px;
+}
+
+.search-button {
+  padding: 9px 20px;
+  margin-left: 5px;
+  margin-right: 0px;
+}
+
+.search-button:hover,
+.location-button:hover {
   background-color: #095ca0;
   border: 1px solid #63baec;
   color: #63baec;
@@ -62,7 +82,7 @@ ul {
   border: 2px solid rgb(91, 113, 135);
   border-radius: 8px;
   padding: 20px;
-  background-color: aliceblue;
+  background: white;
 }
 
 .weather-temperature .active {

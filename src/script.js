@@ -29,7 +29,6 @@ function showTemp(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
   let dateElement = document.querySelector("#current-date");
-  let iconElement = document.querySelector("#weather-icon");
 
   celsiusTemp = response.data.temperature.current;
   cityElement.innerHTML = response.data.city;
@@ -75,6 +74,19 @@ function showCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
+function showLocation(position) {
+  let apiKey = "303c103b672ao77tf0b47afa0937b5c6";
+  let lat = position.coords.latitude;
+  let long = position.coords.longitude;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${long}&lat=${lat}&key=${apiKey}`;
+  axios.get(apiUrl).then(showTemp);
+}
+
+function findMyLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showLocation);
+}
+
 let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
@@ -85,5 +97,8 @@ fahrenheitLink.addEventListener("click", showFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
+
+let findMe = document.querySelector("#current-location");
+findMe.addEventListener("click", findMyLocation);
 
 search("Berlin");
