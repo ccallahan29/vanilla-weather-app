@@ -22,6 +22,23 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <span class="forecast-day">${day}</span>
+              <img src="#" alt="icon" />
+              <span class="forecast-temperature">4°/10°</span>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemp(response) {
   let cityElement = document.querySelector("#current-city");
   let temperatureElement = document.querySelector("#temperature");
@@ -29,6 +46,7 @@ function showTemp(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
   let dateElement = document.querySelector("#current-date");
+  let iconElement = document.querySelector("#weather-icon");
 
   celsiusTemp = response.data.temperature.current;
   cityElement.innerHTML = response.data.city;
@@ -102,3 +120,4 @@ let findMe = document.querySelector("#current-location");
 findMe.addEventListener("click", findMyLocation);
 
 search("Berlin");
+displayForecast();

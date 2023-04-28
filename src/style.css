@@ -3,7 +3,6 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-image: url("img/cozy_night.jpg");
   background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 h1 {
@@ -78,11 +77,11 @@ ul {
   position: relative;
   top: -35px;
 }
-.weather-app {
+.weather-app, footer {
   border: 2px solid rgb(91, 113, 135);
   border-radius: 8px;
   padding: 20px;
-  background: white;
+  background: rgba(255, 255, 255, 0.80);
 }
 
 .weather-temperature .active {
