@@ -30,6 +30,14 @@ function fixDate(timestamp) {
   return days[day];
 }
 
+let hour = new Date().getHours();
+let backgroundImageContainer = document.querySelector(".background-image");
+
+if (hour > 19 || hour < 5) {
+  backgroundImageContainer.style.backgroundImage =
+    'url("/src/img/cozy_night.jpg")';
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");

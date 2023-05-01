@@ -1,8 +1,14 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-image: url("img/cozy_night.jpg");
+}
+.background-image {
+  background-image: url("/src/img/cozy_day.jpg");
   background-size: 100%;
+}
+
+footer {
+  font-size: 12px;
 }
 
 h1 {
@@ -37,6 +43,7 @@ ul {
 .forecast-day {
   text-align: center;
   padding-left: 20px;
+  font-weight: 800px;
 }
 
 .input-form {
@@ -87,7 +94,7 @@ footer {
   border: 2px solid rgb(91, 113, 135);
   border-radius: 8px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .weather-temperature .active {
