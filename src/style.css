@@ -34,6 +34,11 @@ ul {
   font-weight: 100px;
 }
 
+.forecast-day {
+  text-align: center;
+  padding-left: 20px;
+}
+
 .input-form {
   display: inline-block;
   width: 100%;
@@ -77,11 +82,12 @@ ul {
   position: relative;
   top: -35px;
 }
-.weather-app, footer {
+.weather-app,
+footer {
   border: 2px solid rgb(91, 113, 135);
   border-radius: 8px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.80);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .weather-temperature .active {
