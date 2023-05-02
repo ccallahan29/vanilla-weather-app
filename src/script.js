@@ -19,7 +19,41 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+
+  changeBackground(hours);
   return `${day} ${hours}:${minutes}`;
+}
+
+function changeBackground(hours) {
+  if (hours >= 0 && hours < 7) {
+    document
+      .querySelector("body")
+      .setAttribute(
+        "style",
+        `background-image:url("/src/img/cozy_dusk_dawn.jpg")`
+      );
+  }
+  if (hours >= 7 && hours < 16) {
+    document
+      .querySelector("body")
+      .setAttribute("style", `background-image: url("./src/img/cozy_day.jpg")`);
+  }
+  if (hours >= 16 && hours < 19) {
+    document
+      .querySelector("body")
+      .setAttribute(
+        "style",
+        `background-image:url("./src/img/cozy_dusk_dawn.jpg")`
+      );
+  }
+  if (hours >= 19 && hours < 24) {
+    document
+      .querySelector("body")
+      .setAttribute(
+        "style",
+        `background-image:url("./src/img/cozy_night.jpg")`
+      );
+  }
 }
 
 function fixDate(timestamp) {
@@ -28,14 +62,6 @@ function fixDate(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
-}
-
-let hour = new Date().getHours();
-let backgroundImageContainer = document.querySelector(".background-image");
-
-if (hour > 19 || hour < 5) {
-  backgroundImageContainer.style.backgroundImage =
-    'url("/src/img/cozy_night.jpg")';
 }
 
 function displayForecast(response) {
@@ -57,7 +83,7 @@ function displayForecast(response) {
                 width="65" />
               <span class="forecast-temperature-max">${Math.round(
                 forecastDay.temperature.maximum
-              )}° | </span>
+              )}°|</span>
               <span class= "foreecast-temperature-min">${Math.round(
                 forecastDay.temperature.minimum
               )}°</span>
